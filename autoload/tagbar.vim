@@ -1509,9 +1509,7 @@ function! s:InitWindow(autoclose)
         call s:MapKeys()
     endif
 
-    if !s:autocommands_done
-        call s:CreateAutocommands()
-    endif
+    call s:CreateAutocommands()
 
     let &cpoptions = cpoptions_save
 endfunction
